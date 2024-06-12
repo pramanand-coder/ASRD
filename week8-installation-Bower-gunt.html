@@ -1,0 +1,115 @@
+<!--
+Installation Process : 
+Bower Installation process : 
+➢ In VS Code, open the terminal by selecting View > Terminal from the 
+menu. 
+➢ “ npm install -g bower ” command is used for the installing the 
+Bower in the system globally 
+Creation and setup basic Project using the Bower 
+➢ “mkdir bower-demo” command is used to create the folder 
+with the name as “bower-demo” 
+➢ “cd bower-demo” command is used to navigate “bower-demo” 
+folder as current working directory 
+➢ “bower init “ command is used to initialize bower in the project 
+➢ “bower install jQuery –save’ is used to install jQuery module 
+:. Here “--save “ will adds package to the bower file under the 
+dependencies 
+Basic HTML example to use jQuery :
+-->
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> 
+<title>Bower Demo</title> 
+</head> 
+<body> 
+<h1>Bower Demo</h1> 
+<button id="myButton">Click Me</button> 
+<!-- Include jQuery from bower_components --> 
+<script 
+src="bower_components/jquery/dist/jquery.min.js"></script> 
+<script> 
+        $(document).ready(function() { 
+            $('#myButton').click(function() { 
+                alert('Button clicked!'); 
+            }); 
+        }); 
+    </script> 
+</body> 
+</html>
+<!--
+Grunt Installation Process : 
+ 
+➢ “ npm install -g grunt-cli” command is use to install the Grunt 
+globally 
+Create and setup basic project of Grunt : 
+➢ “mkdir grunt-demo” used to create the directory with the name as 
+“ grunt-demo”  
+➢ “cd grunt-demo” command is used to navigate the “grunt-demo” 
+folder as current working directory 
+➢ “ npm init -y “ is used to initialize by creating a “package.json” file 
+➢ “npm install grunt –save-dev” used as development dependency 
+➢ Gruntfile.js 
+module.exports = function(grunt) { 
+    // Project configuration. 
+    grunt.initConfig({ 
+        pkg: grunt.file.readJSON('package.json'), 
+        concat: { 
+            options: { 
+                separator: ';', 
+            }, 
+            dist: { 
+                src: ['src/*.js'], 
+                dest: 'dist/built.js', 
+            }, 
+        }, 
+        uglify: { 
+            dist: { 
+                files: { 
+                    'dist/built.min.js': ['<%= concat.dist.dest %>'] 
+                } 
+            } 
+        } 
+    }); 
+ 
+    // Load the plugins. 
+    grunt.loadNpmTasks('grunt-contrib-concat'); 
+    grunt.loadNpmTasks('grunt-contrib-uglify'); 
+ 
+    // Default task(s). 
+    grunt.registerTask('default', ['concat', 'uglify']); 
+}; 
+ 
+➢ Create the “src” folder inside the “grunt-demo” folder and create a 
+file named as “example.js” 
+➢ example.js 
+console.log(“hello world”) 
+ 
+➢ “grunt” command is used to run the grunt Tasks 
+ 
+ 
+ 
+Output : 
+Gulp Installation Process : 
+➢ “npm install gulp –save-dev” command is used to install the Gulp 
+globally 
+➢ “mkdir gulp-demo” command is used to create a directory with the 
+name as “gulp-demo 
+➢ “cd gulp-demo” command is used to navigate the “gulp-demo” 
+folder as a current working directory 
+➢ “npm install -y “ command is used to initialize the  project  
+➢ Creating the “gulpfile.js” 
+const gulp = require('gulp'); 
+const concat = require('gulp-concat'); 
+const uglify = require('gulp-uglify'); 
+gulp.task('scripts', function() { 
+return gulp.src('src/*.js') 
+.pipe(concat('all.js')) 
+.pipe(uglify()) 
+.pipe(gulp.dest('dist')); 
+}); 
+gulp.task('default', gulp.series('scripts')); 
+➢ “gulp” command is used to run the gulp tasks
+-->

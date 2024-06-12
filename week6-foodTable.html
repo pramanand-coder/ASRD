@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foo Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/footable/css/footable.core.min.css" rel="stylesheet">
+    <style>
+    th {
+            background-color: #c300ff !important;
+            color: #fff !important;
+        }
+        .mark-attendance-btn {
+            background-color: #28a745 !important;
+            color: #fff !important;
+            border: none !important;
+            padding: 5px 10px !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;}
+            </style>
+</head>
+
+
+
+
+<body>
+<div class="container">
+        <table class="table footable">
+            <thead>
+                <tr>
+                    <th>Class Date</th>
+                    <th>Periods</th>
+                    <th>Groups</th>
+                    <th>Sessions</th>
+                    <th>Topic</th>
+                    <th>Students Absents</th>
+                    <th>Attendance %</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>27 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>12</td>
+                    <td>1 Topic</td>
+                    <td>14</td>
+                    <td>70.21%</td>
+                    <td>
+                        <form id="form1" onsubmit="return false;">
+                           
+
+
+
+
+
+ <span id="selectedOption1" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons1">
+                       <button onclick="updateAttendance('selectedOption1', 'attendanceButtons1')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>26 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                    <td>13</td>
+                    <td>1 Topic</td>
+                    <td>10</td>
+                    <td>90.21%</td>
+                    <td>
+                        <form id="form2" onsubmit="return false;">
+                            <span id="selectedOption2" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons2">
+                                <button onclick="updateAttendance('selectedOption2', 'attendanceButtons2')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    
+
+
+
+
+</td>
+                </tr>
+                <tr>
+                    <td>25 March, 2024</td>
+<td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>14</td>
+                    <td>1 Topic</td>
+                    <td>8</td>
+                    <td>80.00%</td>
+                    <td>
+                        <form id="form3" onsubmit="return false;">
+                            <span id="selectedOption3" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons3">
+                                <button onclick="updateAttendance('selectedOption3', 'attendanceButtons3')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                    <td>15</td>
+                    
+
+
+
+
+
+<td>1 Topic</td>
+                    <td>6</td>
+                    <td>85.71%</td>
+                    <td>
+                        <form id="form4" onsubmit="return false;"> 
+ <span id="selectedOption4" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons4">
+                                <button onclick="updateAttendance('selectedOption4', 'attendanceButtons4')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>16</td>
+                    <td>1 Topic</td>
+                    <td>5</td>
+                    <td>92.50%</td>
+                    <td>
+                        <form id="form5" onsubmit="return false;">
+                          
+
+
+
+
+
+
+ <span id="selectedOption5" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons5">
+                                <button onclick="updateAttendance('selectedOption5', 'attendanceButtons5')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+<tr>
+                    <td>22 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                    <td>17</td>
+                    <td>1 Topic</td>
+                    <td>3</td>
+                    <td>94.44%</td>
+                    <td>
+                        <form id="form6" onsubmit="return false;">
+                            <span id="selectedOption6" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons6">
+                                <button onclick="updateAttendance('selectedOption6', 'attendanceButtons6')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                       
+
+
+
+
+ </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>18</td>
+                    <td>1 Topic</td>
+                    <td>7</td>
+                    <td>88.89%</td>
+                    <td>
+ <form id="form7" onsubmit="return false;">
+                            <span id="selectedOption7" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons7">
+                                <button onclick="updateAttendance('selectedOption7', 'attendanceButtons7')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                  
+
+
+
+
+
+  <td>19</td>
+                    <td>1 Topic</td>
+                    <td>4</td>
+                    <td>95.00%</td>
+                    <td>
+                        <form id="form8" onsubmit="return false;">
+                            <span id="selectedOption8" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons8">
+                                <button onclick="updateAttendance('selectedOption8', 'attendanceButtons8')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form> 
+</td>
+                </tr>
+                <tr>
+                    <td>19 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>20</td>
+                    <td>1 Topic</td>
+                    <td>6</td>
+                    <td>93.33%</td>
+                    <td>
+                        <form id="form9" onsubmit="return false;">
+                           
+
+
+
+
+
+ <span id="selectedOption9" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons9">
+                                <button onclick="updateAttendance('selectedOption9', 'attendanceButtons9')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                    <td>21</td>
+                    <td>1 Topic</td>
+<td>3</td>
+                    <td>95.24%</td>
+                    <td>
+                        <form id="form10" onsubmit="return false;">
+                            <span id="selectedOption10" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons10">
+                                <button onclick="updateAttendance('selectedOption10', 'attendanceButtons10')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                       
+
+
+
+
+
+ </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>22</td>
+                    <td>1 Topic</td>
+                    <td>2</td>
+                    <td>96.55%</td>
+                    <td>
+                        <form id="form11" onsubmit="return false;">
+                            <span id="selectedOption11" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons11">
+<button onclick="updateAttendance('selectedOption11', 'attendanceButtons11')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                   
+
+
+
+
+ <td>23</td>
+                    <td>1 Topic</td>
+                    <td>4</td>
+                    <td>95.83%</td>
+                    <td>
+                        <form id="form12" onsubmit="return false;">
+                            <span id="selectedOption12" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons12">
+                                <button onclick="updateAttendance('selectedOption12', 'attendanceButtons12')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15 March, 2024</td>
+                    <td>5 & 6</td>
+<td>BATCH-1</td>
+                    <td>24</td>
+                    <td>1 Topic</td>
+                    <td>5</td>
+                    <td>93.75%</td>
+                    <td>
+                        <form id="form13" onsubmit="return false;">
+                           
+
+
+
+
+
+
+ <span id="selectedOption13" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons13">
+                                <button onclick="updateAttendance('selectedOption13', 'attendanceButtons13')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14 March, 2024</td>
+                    <td>3 & 4</td>
+                    <td>BATCH-2</td>
+                    <td>25</td>
+                    <td>1 Topic</td>
+                    <td>3</td>
+                    <td>96.00%</td>
+                    <td>
+                        <form id="form14" onsubmit="return false;">
+ <span id="selectedOption14" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons14">
+                                <button onclick="updateAttendance('selectedOption14', 'attendanceButtons14')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                      
+
+
+
+
+  </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13 March, 2024</td>
+                    <td>5 & 6</td>
+                    <td>BATCH-1</td>
+                    <td>26</td>
+                    <td>1 Topic</td>
+                    <td>6</td>
+                    <td>92.31%</td>
+                    <td>
+                        <form id="form15" onsubmit="return false;">
+                            <span id="selectedOption15" style="display: none;"><i class="fas fa-lock"></i> Attendance Locked</span>
+                            <span id="attendanceButtons15">
+                                <button onclick="updateAttendance('selectedOption15', 'attendanceButtons15')"><i class="far fa-check-circle mark-attendance-btn"></i> Mark Attendance</button>
+                            </span>
+                        </form>
+                    </td>
+</tr>
+                </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/footable/dist/footable.all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.footable').footable();
+        });
+function updateAttendance(selectedOptionId, buttonsId) {
+            $("#" + selectedOptionId).show();
+            $("#" + buttonsId).hide();
+        }
+    </script>
+</body>
+</html>

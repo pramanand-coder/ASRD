@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>4x3 Responsive Grid Layout with Susy</title> 
+    <link rel="stylesheet" href="styles/main.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <div class="item">1</div> 
+        <div class="item">2</div> 
+        <div class="item">3</div> 
+        <div class="item">4</div> 
+        <div class="item">5</div> 
+        <div class="item">6</div> 
+        <div class="item">7</div> 
+        <div class="item">8</div> 
+        <div class="item">9</div> 
+        <div class="item">10</div> 
+        <div class="item">11</div> 
+        <div class="item">12</div> 
+    </div> 
+</body> 
+</html> 
+_susy-settings.scss 
+@import "../node_modules/susy/sass/susy"; 
+$susy: ( 
+  columns: 12, 
+  gutters: 0.25, 
+  container: 100%, 
+); 
+main.scss 
+@import "susy-settings"; 
+.container { 
+  @include container; 
+  .item { 
+@include span(3); 
+background: #3498db; 
+color: #fff; 
+padding: 20px; 
+text-align: center; 
+margin-bottom: 10px; 
+} 
+} 
+@media (max-width: 768px) { 
+.container .item { 
+@include span(6); 
+} 
+} 
+@media (max-width: 480px) { 
+.container .item { 
+@include span(12); 
+} 
+}
