@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mobile Navigation Bar</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css">
+<style>
+ * {
+ box-sizing: border-box;
+ }
+ body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background-color: #f0f0f0;
+ }
+ .menu-list {
+ max-width: 100%;
+ margin: auto;
+ background-color: rgb(250, 253, 250);
+ border-radius: 10px;
+ overflow: hidden; 
+ }
+ .geeks {
+ background-color: #111;
+ color: white;
+ text-align: center;
+ padding: 10px;
+ position: relative;
+ }
+ .geeks #menus {
+ display: none;
+ padding: 0;
+ margin: 0;
+ }
+ .geeks a {
+ text-decoration: none;
+ color: white;
+ padding: 14px 0;
+ font-size: 16px;
+ display: block;
+ }
+ .geeks a:hover {
+ background-color: #333;
+ }
+ .geeks a.icon {
+ display: block;
+ position: absolute;
+ right: 10px;
+ top: 10px;
+ color: white;
+ text-decoration: none;
+ font-size: 20px;
+ }
+ .footer {
+ text-align: center;
+ background-color: rgb(231, 225, 225);
+ color: black;
+ font-size: 20px;
+ padding: 20px;
+ }
+ @media screen and (max-width: 600px) {
+ .geeks a {
+ padding: 10px;
+ }
+ }
+ .card {
+ max-width: 1200px;
+ margin: 20px auto;
+ padding: 20px;
+ background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ </style>
+</head>
+<body>
+ <div class="card">
+ <div class="menu-list">
+ <div class="geeks">
+ <a href="#" class="">Advanced styling with responsive design</a>
+ <div id="menus">
+ <a href="#">About Us</a> 
+ <a href="#">Practice Questions</a>
+ <a href="#">Technical Quiz</a>
+ <a href="#">Technical Puzzle</a>
+ </div>
+ <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+ <i class="fa fa-bars"></i>
+ </a>
+ </div>
+ <section>
+ <h2>Toggle Menu</h2>
+ <p>
+ A toggle system, commonly found in user interfaces, allows users to switch between two states, 
+typically represented by buttons, switches, or icons. This system is widely used in various applications, 
+websites, and electronic devices to provide users with control over certain functionalities or settings. Here's an 
+overview of the toggle system:
+ <br><br>
+ <b>Basic Functionality:</b> At its core, a toggle system enables users to alternate between two 
+states, often referred to as "on" and "off," "enabled" and "disabled," or "open" and "closed." The system 
+provides a straightforward mechanism for users to change the current state with a single action, such as 
+clicking a button or tapping an icon.
+ <br><br>
+ <b>User Interface Elements:</b> Toggle systems can be implemented using different user interface 
+elements, including:
+ <ul>
+ <li>Toggle Buttons</li>
+ <li>Toggle Switches</li>
+ <li>Toggle Icons</li>
+ </ul>
+ <b>Visual Feedback:</b> A well-designed toggle system provides clear visual feedback to users, 
+indicating the current state and the action they can perform.
+ <br><br>
+ 
+ </p>
+ </section>
+ </div>
+ <div class="footer">
+ <p>&copy; 2024 My Website. All rights reserved.</p>
+ </div>
+ </div>
+<script>
+ function toggleMenu() {
+ let x = document.getElementById("menus");
+ if (x.style.display === "block") {
+ x.style.display = "none";
+ } else {
+ x.style.display = "block";
+ }
+ }
+ </script>
+</body>
+</html>
