@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Wireframe Layout</title>
+ <style>
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ body {
+ font-family: Arial, sans-serif;
+ background-color: #f5f5f5;
+ padding: 20px;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex; 
+ }
+ .sidebar {
+ background-color: #666;
+ color: #fff;
+ padding: 20px;
+ box-sizing: border-box;
+ border: 3px solid rgb(26, 200, 17);
+ text-align: left;
+ width: 20%;
+ height:400px;
+ overflow:auto;
+ }
+ .content {
+ background-color: #fff;
+ padding: 20px;
+ width: 80%;
+ font-size:20px;
+ text-align:middle;
+ }
+ @media only screen and (max-width: 768px) {
+ .container {
+ flex-direction: column;
+ }
+ .sidebar, .content {
+ width: 100%; 
+ }
+ }
+ header {
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+ }
+ footer {
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+ clear: both;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>ADVANCED STYLING WITH RESPONSIVE DESIGN</h1>
+ </header>
+ <div class="container">
+ <div class="sidebar">
+ <h2>ASRD</h2>
+ <p>It used to be the case that everyone viewed web pages on about the same size screen - a desktop 
+computer. But now it is just as likely that someone will be using a smart phone, tablet, or assistive technology 
+to access the Internet. Therefore, people viewing your site will now expect that it will perform regardless of the 
+device (smartphone, tablet, laptop, desktop computer, or screen reader) AND take into account some common 
+personal settings such as color schemes. This ability to respond to any platform and user preferences is called 
+Responsive Design.
+ This course will expand upon the basic knowledge of CSS3 to include topics such as wireframes, fluid design, 
+media queries, and the use of existing styling paradigms. After the course, learners will be able to:
+ ** Explain the mobile-first paradigm and the importance of wireframes in the design phase
+ ** Create sites that behave across a range of platforms
+ ** Recognize existing design frameworks such as Bootstrap
+ A basic understanding of HTML and CSS is expected when you enroll in this class, so it can be taken third or 
+fourth in the Web Design for Everybody specialization. Additional courses focus on adding interactivity with the 
+JavaScript Programming Language and completing a capstone project.Lorem ipsum dolor sit amet consectetur 
+adipisicing elit. Cum voluptatem totam blanditiis cumque sequi maiores! Impedit, quaerat optio, rerum, error 
+debitis maxime dolor eveniet blanditiis incidunt labore numquam accusamus? Adipisci.</p>
+ </div>
+ <div class="content">
+ <h2>Wireframes</h2>
+ <p>The same screen can be built in a lot of different ways, but only a few of them will get your message 
+across correctly and result in an easy-to-use software or website.
+ The purpose of a wireframe is to define a skeletal layout that is easy to understand, and encourages 
+iteration and feedback. Getting to agreement on a good interface structure is a critical part of the software 
+design process.
+ Wireframes are important because doing this work now, before any code is written and before the visual 
+design is finalized, will save you lots of time and painful adjustment work later.
+ The primary reason for wireframing is to generate and communicate ideas, so making wireframes is not 
+limited to any single role or specialization in an organization.
+ </p>
+ </div>
+ </div>
+ <Footer>
+ <p>2024 , Karthik</p>
+ </footer>
+</body>
+</html>
