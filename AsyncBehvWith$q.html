@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Async With $q</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myController", function($scope, $q, $timeout) {
+            function fetchData() {
+                var deferred = $q.defer();
+                $timeout(function() {
+                    var success = true;
+                    if (success) {
+                        deferred.resolve("Data fetched successfully!");
+                    } else {
+                        deferred.reject("Error fetching data.");
+                    }
+                }, 2000);
+                return deferred.promise;
+            }
+            $scope.getData = function() {
+                console.log("Start fetching data...");
+                fetchData()
+                    .then(function(data) {
+                        console.log(data);
+                        $scope.result = data;
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                        $scope.result = error;
+                    })
+                    .finally(function() {
+                        console.log("Fetch operation completed successfully!");
+                    });
+                console.log("End of function call");
+            };
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <h1>Asynchronous Behaviour With $q</h1>
+    <button ng-click="getData()">Fetch Data</button>
+    <p>{{ result }}</p>
+</body>
+</html>
